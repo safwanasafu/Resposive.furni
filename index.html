@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+
+<script>
+  function validate(){
+    var email=document.getElementById("email");
+    var password=document.getElementById("password");
+   
+    if(email.value==""){
+      // alert("Must have a email")
+      document.getElementById("error").innerHTML="Must have a email";
+      document.getElementById("email").style.border="2px solid red";
+      document.form1.email.focus();
+      return false;
+    }
+    if(password.value==""){
+      // alert("password")
+      document.getElementById("error1").innerHTML="Must have a password";
+      document.getElementById("password").style.border="2px solid red";
+
+      document.form1.password.focus();
+      return false;
+    }
+    if(cpassword.value==""){
+      // alert("password")
+      document.getElementById("error2").innerHTML="please confirm password";
+      document.getElementById("cpassword").style.border="2px solid red";
+
+      document.form1.cpassword.focus();
+      return false;
+    }
+    if(cpassword.value !=password.value){
+      // alert("not matching password")
+      document.getElementById("error2").innerHTML="not matching password";
+      document.getElementById("cpassword").style.border="2px solid red";
+      document.form1.cpassword.focus();
+      return false;
+    }
+    return true;
+
+  }
+</script>
+
+
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <link rel="stylesheet" href="index.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+     <link rel="icon" type="image/png" href="images/favicon.jpeg">
+     <title>furnimart</title>
+</head>
+<body>
+<!-- navbar -->
+        <nav class="navbar navbar-expand-lg p-3">
+          <div class="container-fluid">
+            <a class="navbar-brand ps-5 fw-bold" href="#">furni.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Oders</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Location</a>
+                </li>
+              </ul>
+              
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            
+            </div>
+          </div>
+        </nav>
+        <!-- navbar -->
+         <!-- section1 -->
+         <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" style="position: relative;">
+              <img src="images/new-arrivals-v2-min_2.jpg" class="slide d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h3 class="text-black">Modern Design</h3>
+                <p class="text-black">Centuries have not worm-eaten the solidity of this ancient furniture of the mind.</p>
+              </div>
+              <div style="position: absolute;top: 40%;left: 50%;transform: translate(-50%,-50%);">
+                <h1 class="one text-center">Modern Interior <br> Design Studio</h1>
+              </div>
+            
+            </div>
+            <div class="carousel-item"  style="position: relative;">
+              <img src="images/furni.1.jpg" class="slide d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h3 class="text-black">Modern Design</h3>
+                <p class="text-black">Centuries have not worm-eaten the solidity of this ancient furniture of the mind.</p>
+              </div>
+              <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">
+                <h1 class="text-center">Furni world</h1>
+              </div>
+            </div>
+            <div class="carousel-item" style="position: relative;">
+              <img src="images/furni3.jpg" class="slide d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h3 class="text-black">Mordern design</h3>
+                <p class="text-black">Centuries have not worm-eaten the solidity of this ancient furniture of the mind.</p>
+              </div>
+              <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">
+                <h1 class="text-center">Furni world</h1>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+         <!-- section1 -->
+
+         <h1 class="text-center text-black mt-5">Why Choose Us...</h1>
+
+        <!-- section2 -->
+         <div class="container mt-5 pt-5">
+          <div class="row">
+             <div class="col-md-3 text-black">
+              <i class="bi bi-truck text-center"></i>
+              <h5>Fast & Free Shipping</h5>
+              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate</p>
+             </div>
+             <div class="col-md-3 text-black">
+              <i class="bi bi-bag-dash"></i>
+              <h5>Easy to Shop</h5>
+              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+             </div>
+             <div class="col-md-3">
+              <i class="bi bi-clock"></i>
+              <h5>24/7 Support</h5>
+              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+             </div>
+             <div class="col-md-3">
+              <i class="bi bi-arrow-left-right"></i>
+              <h5>Hassle Free Returns</h5>
+              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+             </div>
+          </div>
+         </div>
+         <!-- section2 -->
+
+
+      <!-- section extra -->
+      <div class="container">
+        <div class="row">
+           <div class=" extra col-md-12">
+
+            </div>
+          </div>
+       </div>
+      <!-- section4 extra -->
+
+         <!-- section3 -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 mt-5 pt-5">
+              <div>
+                <h2 class="text-black text-center">Crafted with excellent material.</h2>
+                <p class="text-black text-center">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+                <div class="two">
+                   <button id="uniq" type="button" class="btn btn-dark rounded-pill">Explore</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!-- section3 -->
+
+
+         <!-- section4 -->
+         <div class="container">
+          <div class="row">
+            <div class="col-md-4 mt-5 pt-5 ps-5 col-lg-4 col-xl-4">
+              <div class="card" style="width: 18rem;">
+                <img src="images/chr1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-text text-center">Nordic Chair</h4>
+                  <p class="text-center">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio
+
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-5 pt-5 ps-5 col-lg-4 col-xl-4">
+              <div class="card" style="width: 18rem;">
+                <img src="images/chair2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="text-center">
+                    Kruzo Aero Chair</h4>
+                  <p class="text-center">
+                    Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-5 pt-5 ps-5 col-lg-4 col-xl-4">
+              <div class="card" style="width: 18rem;">
+                <img src="images/chr3.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="text-center">
+                    Ergonomic Chair</h4>
+                  <p class="card-text text-center">
+                    Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio Ergonomic Chair</p>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+         <!-- section4 -->
+
+
+  <!-- section extra -->
+      <div class="container">
+          <div class="row">
+             <div class=" extra col-md-12">
+
+              </div>
+            </div>
+         </div>
+        <!-- section4 extra -->
+          <!-- section extra -->
+      <div class="container">
+        <div class="row">
+           <div class=" extra col-md-12">
+
+            </div>
+          </div>
+       </div>
+      <!-- section4 extra -->
+
+
+         <!-- section5 -->
+              <div class="container-fluid">
+                <div class="row">
+                  <!-- <div class="col-md-6">
+                    <div>
+                     <img  class="imgs ms-5" src="images/furni5.jpg" style="width: 40vw ;"> -->
+                  <!-- </div>  -->
+                  
+                  </div>
+                  <div id="prg" class="col-md-12 pt-5">
+                    <h2 class="text-center">We Help You Make Modern <br> Interior Design</h2>
+                    <p class="text-center">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada.
+                       Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque
+                       habitant morbi tristique senectus et netus et malesuadaDonec facilisis quam ut purus rutrum lobortis.
+                       Donec vitae odio quis nisl dapibus malesuada.
+                       Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque
+                       habitant morbi tristique senectus et netus et malesuada</p>
+                       <ul>
+                        <li class="text-center">Donec vitae odio quis nisl <br> dapibus malesuada</li>
+                        <li class="text-center">Donec vitae odio quis nisl <br> dapibus malesuada</li>
+                        <!-- <li>Donec vitae odio quis nisl <br> dapibus malesuada</li> -->
+                        <!-- <li>Donec vitae odio quis nisl <br> dapibus malesuada</li> -->
+                       </ul>
+                  </div>
+                </div>
+              </div>
+          <!-- section5 -->
+             <!-- section extra -->
+
+             <div class="container">
+              <div class="row">
+                <div class=" extra col-md-12">
+                </div>
+              </div>
+             </div>
+            <!-- section4 extra -->
+
+    <!-- form validation -->
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                 
+                   <h1 id="head">Register now..</h1>
+                  
+                    <form action="" name="form1" method="post" onsubmit="return validate()">
+                      <div class="mb-3">
+                          <input class="sub" type="email" placeholder="Email" name="email" id="email"> 
+                          <br> <br>
+                          <small id="error" class="text-danger"></small>
+                      </div>
+                      <div class="mb-3">
+                          <input class="sub" type="password" placeholder="Password" name="password" id="password"> 
+                          <br> <br>
+                          <small id="error1" class="text-danger"></small>
+                      </div>
+                      <div class="mb-3">
+                          <input class="sub" type="password" placeholder="Confirm" name="cpassword" id="cpassword"> 
+                          <br> <br>
+                          <small id="error2" class="text-danger"></small>
+                      </div>
+                      <input type="submit" value="Register">
+                  </form>
+                  
+                </div>
+              </div>
+            </div>
+        <!-- form validation -->
+           <!-- section extra -->
+
+           <div class="container">
+            <div class="row">
+              <div class=" extra col-md-12">
+              </div>
+            </div>
+           </div>
+          <!-- section4 extra -->
+
+          <!-- section5 -->
+            <div id="bg" class="container-fluid">
+              <div class="row">
+                <div id="pad" class="col-md-6 pt-5 mt-5">
+                    <h3>Furni.</h3>
+                    <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis
+                       nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate 
+                       velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
+                    <div class="icon">
+                      <i class="bi bi-facebook"></i>
+                      <i class="bi bi-twitter"></i>
+                      <i class="bi bi-instagram"></i>
+                      <i class="bi bi-whatsapp"></i>
+                    </div>
+                </div>
+                 <div class="col-md-2 mt-5 pt-5">
+                  <div class="foot">
+                    <ul>
+                      <li>About us</li>
+                      <li>Services</li>
+                      <li> Blog</li>
+                      <li>Contact us</li>
+                   </ul>
+                </div>
+                 </div>
+
+
+                 <div class="col-md-2 pt-5 mt-5">
+                  <div class="foot">
+                    <ul>
+                      <li>Support</li>
+                      <li> Knowledge base</li>
+                      <li>Live chat</li>
+                    </ul>
+                  </div>
+                 </div>
+
+
+                 <div class="col-md-2 mt-5 pt-5">
+                  <div class="foot">
+                    <ul>
+                      <li>Jobs</li>
+                      <li> Our team</li>
+                      <li>Leadership</li>
+                      <li>Privacy Policy</li>
+                    </ul>
+                  </div>
+                 </div>
+
+              </div>
+            </div>
+
+            
+            <div class="container-fluid">
+              <div class="row">
+                <div class="hr col-md-12">
+                  <hr class="mt-5">
+                </div>
+              </div>
+             </div>
+           <!-- section5 -->
+
+            <!-- section6 -->
+            <div class="container-fluid">
+              <div class="row">
+                <div class="hr col-md-8 ps-5">
+                <p>Copyright ©2024. All Rights Reserved. — Designed with love by Untree.co Distributed By ThemeWagon</p>
+                </div>
+                <div class="hr col-md-4 ps-5">
+                <span>Terms & Conditions
+                  Privacy Policy</span>
+                </div>
+
+              </div>
+             </div>
+
+             <!-- section6 -->
+                <!-- section extra -->
+
+           <div class="container-fluid">
+            <div class="row">
+              <div class=" extra1 col-md-12">
+              </div>
+            </div>
+           </div>
+          <!-- section4 extra -->
+            
+
+
+        
+
+         
+
+
+
+        
+        
+     
+  
+
+
+
+
+
+
+
+
+
+
+
+    <!-- bootstrap.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ 
+</body>
+</html> 
